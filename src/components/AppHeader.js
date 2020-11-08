@@ -5,8 +5,10 @@ import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import SearchIcon from '@material-ui/icons/Search';
 import avatar from '../images/avatar.png';
-import illustration1 from '../images/illustration1.png';
-import IntroBox from './IntroBox';
+import { ListItemSecondaryAction } from '@material-ui/core';
+
+
+
 
 export default function AppHeader() {
     return (
@@ -14,10 +16,10 @@ export default function AppHeader() {
             <div className="wrap" data-aos="slide-down">
 
                 <div className="topBar">
-                    <div className="logoImg"></div>
+                    <div className="logoImg" onClick={() => {window.location.href='/'}}></div>
                     <div className="menu">
-                        <a href="#search-items" className="menuOption">Search items</a>
-                        <a href="#post-items" className="menuOption">Post items</a>
+                        <a href="/search-items" className="menuOption">Search items</a>
+                        <a href="/post-items" className="menuOption">Post items</a>
                     </div>
                     <div className="infoBox">
                         <a href="#messages" className="linkToMessages" data-message-count="0">
@@ -55,14 +57,6 @@ export default function AppHeader() {
                 </div>
 
             </div>
-
-            <div className="intro">
-                <IntroBox />
-                <div className="illustration1" data-aos="fade-left">
-                    <img src={illustration1} alt="illustration" />
-                </div>
-            </div>
-
         </header>
     )
 }

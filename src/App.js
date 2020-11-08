@@ -1,13 +1,20 @@
 import React, { useEffect } from 'react';
 import './css/App.css';
 import AppHeader from './components/AppHeader';
-import AppSection1 from './components/AppSection1';
-import AppSection2 from './components/AppSection2';
-import AppSection3 from './components/AppSection3';
-import AppSection4 from './components/AppSection4';
+import Home from './pages/Home.js';
+import SearchItems from './pages/SearchItems.js';
+import PostItems from './pages/PostItems.js';
+import AboutUs from './pages/AboutUs.js';
+import Contact from './pages/Contact.js';
+import Help from './pages/Help.js';
 import AppFooter from './components/AppFooter';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 export default function App() {
   useEffect(() => {
@@ -15,12 +22,30 @@ export default function App() {
   }, []);
   return (
     <div className="App">
+      <Router>
         <AppHeader />
-        <AppSection1 />
-        <AppSection2 />
-        <AppSection3 />
-        <AppSection4 />
+        <Switch>
+          <Route path="/search-items">
+            <SearchItems />
+          </Route>
+          <Route path="/post-items">
+            <PostItems />
+          </Route>
+          <Route path="/about-us">
+            <AboutUs />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/help">
+            <Help />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
         <AppFooter />
+      </Router>
     </div>
   );
 }

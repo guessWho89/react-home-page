@@ -26,9 +26,9 @@ export default function AppFooter() {
                     </div>
                     <div className="box2">
                         <h3>Allgood</h3>
-                        <p><a href="#about-us">About us</a></p>
-                        <p><a href="#contact">Contact</a></p>
-                        <p><a href="#help">Help</a></p>
+                        <p><a href="/about-us">About us</a></p>
+                        <p><a href="/contact">Contact</a></p>
+                        <p><a href="/help">Help</a></p>
                     </div>
                     <div className="box3">
                         <h3>Charities</h3>

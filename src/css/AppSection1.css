@@ -263,6 +263,10 @@
 }
 
 @media (max-width: 480px) {
+    .section1 { 
+        padding: 2rem;
+    }
+    
     .section1 .dashedBox {
         width: 100%;
     }

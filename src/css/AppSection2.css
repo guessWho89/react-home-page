@@ -1,33 +1,31 @@
 .section2 {
     background: var(--theme-color);
-    padding: 3rem;
+    padding: 6rem 3rem;
 }
 
 .section2 .wrap {
     max-width: 1200px;
     margin: auto;
-    padding: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.section2 .wrap > div {
-    margin: auto;
+.section2 .imgHolder {
+    margin: auto 2rem;
 }
 
 .section2 .illustration2 {
     width: 100%;
     max-width: 500px;
-    padding: 10px;
 }
 
 .section2 .textHolder {
     max-width: 500px;
     width: 100%;
     padding: 10px;
-    margin-left: 40px;
+    margin: auto 2rem;
 }
 
 .section2 .btnsHolder .signUp,
@@ -66,10 +64,15 @@
 
 @media (max-width: 1024px) {
     .section2 {
-        padding: 1rem 0;
+        padding: 4rem 2rem;
     }
 
     .section2 .wrap {
         flex-direction: column-reverse;
+    }
+
+    .section2 .imgHolder,
+    .section2 .textHolder {
+        margin: 1rem auto;
     }
 }

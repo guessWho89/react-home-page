@@ -6,7 +6,7 @@ import twIcon from '../images/tw-icon.png';
 
 export default function AppFooter() {
     return (
-        <footer>
+        <footer data-aos="flip-up">
             <div className="footerHolder">
                 <div className="footerTop">
                     <div className="box1">

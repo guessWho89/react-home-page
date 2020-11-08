@@ -22,7 +22,7 @@ export default function IntroBox() {
         }
     ];
     return (
-        <div className="introBoxes">
+        <div className="introBoxes" data-aos="fade-right">
             {content.map((box) => {
                 const {id, icon, text} = box;
                 return(

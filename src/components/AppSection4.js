@@ -5,7 +5,7 @@ import { Button }  from '@material-ui/core';
 
 export default function AppSection4() {
     return (
-        <section className="section4">
+        <section className="section4" data-aos="slide-left">
             <div className="grayBox">
                 <h2>Are you a Charity or Organisation looking to Fundraise?</h2>
                 <p>Want to register with AllGood.market so people can donate the proceeds of their sales to you? Please contact us at ifno@allgod.market or complete our online form.</p>

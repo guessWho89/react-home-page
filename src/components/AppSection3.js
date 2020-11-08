@@ -6,7 +6,7 @@ import ArrowForwardIosRoundedIcon from '@material-ui/icons/ArrowForwardIosRounde
 
 export default function AppSection3() {
     return (
-        <section className="section3">
+        <section className="section3" data-aos="slide-right">
             <h2>Featured items</h2>
             <ItemCard />
             <div className="controls">

@@ -36,7 +36,7 @@ export default function DashedBoxes() {
         },
     ];
     return (
-        <div className="dashedBoxes">
+        <div className="dashedBoxes" data-aos="fade-right">
             {content.map((box) => {
                 const {id, icon, action, description, register} = box;
                 return (

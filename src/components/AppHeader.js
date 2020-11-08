@@ -8,11 +8,10 @@ import avatar from '../images/avatar.png';
 import illustration1 from '../images/illustration1.png';
 import IntroBox from './IntroBox';
 
-
 export default function AppHeader() {
     return (
         <header>
-            <div className="wrap">
+            <div className="wrap" data-aos="slide-down">
 
                 <div className="topBar">
                     <div className="logoImg"></div>
@@ -22,10 +21,10 @@ export default function AppHeader() {
                     </div>
                     <div className="infoBox">
                         <a href="#messages" className="linkToMessages" data-message-count="0">
-                            <MailOutlineIcon style={{color: "#fff", fontSize: "40px"}} />
+                            <MailOutlineIcon style={{ color: "#fff", fontSize: "40px" }} />
                         </a>
                         <a href="#notifications" className="linkToNotifications" data-notification-count="2">
-                            <NotificationsNoneIcon style={{color: "#fff", fontSize: "40px"}} />
+                            <NotificationsNoneIcon style={{ color: "#fff", fontSize: "40px" }} />
                         </a>
                     </div>
                     <div className="userInfo">
@@ -35,7 +34,7 @@ export default function AppHeader() {
                         <select name="" id="" className="userOptions">
                             <option value="Username">Username</option>
                         </select>
-                        <ExpandMoreIcon style={{color: "#fff", fontSize: "32px", position: "absolute", right: "0", zIndex: "1"}} />
+                        <ExpandMoreIcon style={{ color: "#fff", fontSize: "32px", position: "absolute", right: "0", zIndex: "1" }} />
                     </div>
                 </div>
 
@@ -59,7 +58,7 @@ export default function AppHeader() {
 
             <div className="intro">
                 <IntroBox />
-                <div className="illustration1">
+                <div className="illustration1" data-aos="fade-left">
                     <img src={illustration1} alt="illustration" />
                 </div>
             </div>

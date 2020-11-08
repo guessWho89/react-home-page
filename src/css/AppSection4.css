@@ -19,6 +19,13 @@
     text-transform: lowercase;
     font-size: 20px;
     z-index: 2;
+    color: var(--gray-lighter);
+    transition: 0.3s;
+}
+
+.section4 .grayBox .btn:hover {
+    background: var(--contrast-color);
+    filter: brightness(0.9);
 }
 
 .MuiButton-label:first-letter {

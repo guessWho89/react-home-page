@@ -1,0 +1,283 @@
+.section1 {
+    padding: 5rem 3rem;
+}
+
+.section1 .titleHolder {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.section1 .titleHolder::after {
+    content: '';
+    width: 100px;
+    height: 2px;
+    background: var(--gray);
+    display: block;
+    margin: 1.5rem auto;
+}
+
+.section1 .title {
+    color: var(--theme-color)
+}
+
+.section1 .subTitle {
+    color: var(--contrast-color);
+    font-weight: bold;
+}
+
+.section1 .dashedBoxes {
+    display: flex;
+    text-align: center;
+    margin: auto;
+    max-width: 1200px;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.section1 .dashedBox {
+    width: 25%;
+    margin: 2rem;
+    min-height: 300px;
+    position: relative;
+}
+
+.section1 .dashedHeart {
+    max-width: 240px;
+    margin: 0 70px 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.section1 .dashedHeart img,
+.section1 .dashedBox img {
+    max-width: 150px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.section1 .dashedHeart h4,
+.section1 .dashedBox h4 {
+    color: var(--theme-color);
+}
+
+.section1 .dashedHeart p,
+.section1 .dashedBox p {
+    color: var(--gray-text);
+    margin: 0 20px;
+}
+
+.section1 .dashedHeart p {
+    margin: auto;
+}
+
+.section1 .dashedBox p a {
+    color: var(--contrast-color);
+}
+
+.section1 .dashedBox:nth-child(1)::before {
+    content: '';
+    background: url('../images/arrow.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: -20px;
+    top: -95px;
+}
+
+.section1 .dashedBox:nth-child(2)::before {
+    content: '';
+    background: url('../images/yellow-dashed-line.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 10px;
+    width: 100px;
+    position: absolute;
+    left: -75px;
+    top: 75px;
+}
+
+.section1 .dashedBox:nth-child(3)::before {
+    content: '';
+    background: url('../images/green-dashed-line.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 10px;
+    width: 100px;
+    position: absolute;
+    left: -75px;
+    top: 75px;
+}
+
+.section1 .dashedBox:nth-child(4)::before {
+    content: '';
+    background: url('../images/purple-dashed-line.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 10px;
+    width: 100px;
+    position: absolute;
+    left: -75px;
+    top: 75px;
+}
+
+.section1 .dashedBox:nth-child(4)::after {
+    content: '';
+    background: url('../images/red-dashed-line.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 320px;
+    width: 220px;
+    position: absolute;
+    right: -32px;
+    top: 75px;
+}
+
+.section1 .heartHolder {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+}
+
+.section1 .dashedHeart::before {
+    content: '';
+    background: url('../images/watch.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    width: 220px;
+    position: absolute;
+    left: -170px;
+    top: 30px;
+}
+
+.section1 .videoHolder {
+    position: relative;
+}
+
+.section1 .videoHolder iframe {
+    height: 240px;
+    width: 360px;
+    border: none;
+}
+
+.section1 .videoHolder::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 25px;
+    background: url('../images/video-top.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -20px;
+    left: 50px;
+    z-index: 1;
+}
+
+.section1 .videoHolder::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 25px;
+    background: url('../images/video-bottom.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: -8px;
+    left: 150px;
+    z-index: 1;
+}
+
+@media (max-width: 1200px) {
+    .section1 .dashedBox:nth-child(2)::before,
+    .section1 .dashedBox:nth-child(3)::before,
+    .section1 .dashedBox:nth-child(4)::before {
+        width: 80px;
+    }
+
+    .section1 .dashedBox:nth-child(4)::after {
+        width: 150px;
+        top: 140px;
+    }
+
+    .section1 .dashedHeart::before {
+        width: 160px;
+        left: -120px;
+        top: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .section1 .dashedBox:nth-child(2)::before, 
+    .section1 .dashedBox:nth-child(3)::before, 
+    .section1 .dashedBox:nth-child(4)::before {
+        width: 50px;
+        left: -55px;
+        top: 65px;
+    }
+
+    .section1 .heartHolder {
+        flex-direction: column-reverse;
+    }
+
+    .section1 .videoHolder {
+        margin-top: -120px;
+        margin-left: 20px;
+    }
+
+    .section1 .dashedHeart {
+        margin-right: 0;
+    }
+ 
+}
+
+@media (max-width: 768px) {
+    .section1 .section1 {
+        padding: 2rem;
+    }
+    .section1 .dashedBox:nth-child(1)::before, 
+    .section1 .dashedBox:nth-child(2)::before, 
+    .section1 .dashedBox:nth-child(3)::before, 
+    .section1 .dashedBox:nth-child(4)::before,
+    .section1 .dashedBox:nth-child(4)::after,
+    .section1 .dashedHeart::before {
+        display: none;
+    }
+    .section1 .dashedBoxes {
+        display: block;
+        position: initial;
+    }
+
+    .section1 .dashedBox {
+        display: inline-block;
+        width: 50%;
+        margin: auto;
+    }
+
+    .section1 .dashedHeart,
+    .section1 .videoHolder {
+        margin: 20px auto;
+    } 
+}
+
+@media (max-width: 480px) {
+    .section1 .dashedBox {
+        width: 100%;
+    }
+
+    .section1 .videoHolder iframe {
+        width: 100%;
+    }
+
+    .section1 .videoHolder::before,
+    .section1 .videoHolder::after {
+        max-width: 200px;
+        width: 100%;
+    }
+
+    .section1 .videoHolder::after {
+        left: 60px;
+    }
+}

@@ -1,0 +1,141 @@
+.section3 {
+    padding: 6rem 3rem;
+    position: relative;
+}
+
+.section3 h2 {
+    text-align: center;
+    color: var(--theme-color);
+    margin-bottom: 60px;
+}
+
+.section3 .itemCards {
+    height: 550px;
+    display: flex;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative;
+}
+
+.section3 .itemCards::-webkit-scrollbar {
+    display: none;
+}
+
+.section3 .controls {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 40%;
+}
+
+.section3 .controls .left,
+.section3 .controls .right {
+    background: var(--gray-light);
+    box-shadow: 0 0 10px var(--gray-dark);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.7;
+}
+
+.section3 .controls .left { 
+    margin-left: 20px;
+}
+
+.section3 .controls .right {
+    margin-left: calc(100% - 160px);
+    margin-right: auto;
+}
+
+.section3 .controls .left:hover,
+.section3 .controls .right:hover {
+    box-shadow: 0 0 30px var(--gray-dark);
+    opacity: 1;
+}
+
+.section3 .card {
+    margin: 20px;
+    min-width: 340px;
+    background: var(--gray-light);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.section3 .card h3 {
+    color: var(--theme-color);
+    margin-bottom: 40px;
+}
+
+.section3 .card p {
+    font-size: 18px;
+    color: var(--gray-text);
+}
+
+.section3 .card .name {
+    color: var(--theme-color);
+    font-weight: 500;
+}
+
+.section3 .imageHolder img {
+    width: 100%;
+    height: 150px;
+}
+
+.section3 .card .textHolder {
+    padding: 20px;
+}
+
+.section3 .card .banner {
+    padding: 10px;
+    background: var(--gray-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section3 .card .banner span {
+    margin: 5px;
+    font-size: 18px;
+    color: var(--theme-color);
+}
+
+.section3 .card .banner img {
+    width: 25px;
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    .section3 {
+        padding: 2rem 0;
+    }
+
+    .section3 h2 {
+        margin-bottom: 30px;
+    }
+
+    .section3 .card {
+        min-width: 310px;
+        height: 500px;
+    }
+
+    .section3 .controls .left, 
+    .section3 .controls .right {
+        width: 50px;
+        height: 50px;
+    }
+
+    .section3 .controls .left {
+        margin-left: 10px;
+    } 
+
+    .section3 .controls .right {
+        margin-left: calc(100% - 120px);
+    }
+}

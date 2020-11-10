@@ -1,16 +1,4 @@
-// variables
-$theme-color: #22315b;
-$theme-dark-color: #1c284b;
-$contrast-color: #dd5757;
-$gray: #dcdee5;
-$gray-lighter: #f4f5f9;
-$gray-light: #ebedf2;
-$gray-dark: #c2c6d3;
-$light-text: #fff;
-$gray-text: #666;
-$green: #22a47b;
-$purple: #6767f4;
-
+@import './Vars.scss';
 
 // global Styles
 *,

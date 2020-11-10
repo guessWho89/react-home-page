@@ -1,0 +1,299 @@
+@import './App.scss';
+
+.section1 {
+    padding: 5rem 3rem;
+    .titleHolder {
+        margin: 2rem auto;
+        text-align: center;
+        &::after {
+            content: '';
+            width: 100px;
+            height: 2px;
+            background: $gray;
+            display: block;
+            margin: 1.5rem auto;
+        }
+        .title {
+            color: $theme-color;
+        }
+        .subTitle {
+            color: $contrast-color;
+            font-weight: bold;
+        }
+    }
+    .dashedBoxes {
+        display: flex;
+        text-align: center;
+        margin: auto;
+        max-width: 1200px;
+        width: auto;
+        align-items: center;
+        justify-content: center;
+        .dashedBox {
+            width: 25%;
+            margin: 2rem;
+            min-height: 300px;
+            position: relative;
+            img {
+                max-width: 150px;
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            h4 {
+                color: $theme-color;
+            }
+            p {
+                color: $gray-text;
+                margin: 0 20px;
+                a {
+                    color: $contrast-color;
+                }
+            }
+            &:nth-child(1)::before {
+                content: '';
+                background: url('../images/arrow.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                left: -20px;
+                top: -95px;
+            }
+            &:nth-child(2)::before {
+                content: '';
+                background: url('../images/yellow-dashed-line.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: 10px;
+                width: 100px;
+                position: absolute;
+                left: -75px;
+                top: 75px;
+            }
+            &:nth-child(3)::before {
+                content: '';
+                background: url('../images/green-dashed-line.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: 10px;
+                width: 100px;
+                position: absolute;
+                left: -75px;
+                top: 75px;
+            }
+            &:nth-child(4)::before {
+                content: '';
+                background: url('../images/purple-dashed-line.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: 10px;
+                width: 100px;
+                position: absolute;
+                left: -75px;
+                top: 75px;
+            }
+            &:nth-child(4)::after {
+                content: '';
+                background: url('../images/red-dashed-line.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: 320px;
+                width: 220px;
+                position: absolute;
+                right: -32px;
+                top: 75px;
+            }
+        }
+    }
+    .heartHolder {
+        position: relative;
+        max-width: 1000px;
+        margin: auto;
+        display: flex;
+        .dashedHeart {
+            max-width: 240px;
+            margin: 0 70px 0 auto;
+            text-align: center;
+            position: relative;
+            img {
+                max-width: 150px;
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            h4 {
+                color: $theme-color;
+            }
+            p {
+                color: $gray-text;
+                margin: auto;
+            }
+            &::before {
+                content: '';
+                background: url('../images/watch.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: 100px;
+                width: 220px;
+                position: absolute;
+                left: -170px;
+                top: 30px;
+            }
+        }
+        .videoHolder {
+            position: relative;
+            video {
+                height: 240px;
+                width: 360px;
+                border: none;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                width: 250px;
+                height: 25px;
+                background: url('../images/video-top.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                top: -2px;
+                left: 50px;
+                z-index: 1;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                width: 250px;
+                height: 25px;
+                background: url('../images/video-bottom.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                bottom: -8px;
+                left: 150px;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .section1 {
+        .dashedBoxes {
+            .dashedBox {
+                &:nth-child(2)::before,
+                &:nth-child(3)::before,
+                &:nth-child(4)::before {
+                    width: 80px;
+                }
+                &:nth-child(4)::after {
+                    width: 150px;
+                    top: 140px;
+                }
+            }
+        }
+        .heartHolder {
+            .dashedHeart {
+                &::before {
+                    width: 160px;
+                    left: -120px;
+                    top: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .section1 {
+        .dashedBoxes {
+            .dashedBox {
+                &:nth-child(2)::before, 
+                &:nth-child(3)::before, 
+                &:nth-child(4)::before {
+                    width: 50px;
+                    left: -55px;
+                    top: 65px;
+                }
+            }
+        }
+        .heartHolder {
+            flex-direction: column-reverse;
+            .videoHolder {
+                margin-top: -120px;
+                margin-left: 20px;
+                &::after {
+                    bottom: -13px;
+                }
+            }
+            .dashedHeart {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .section1 {
+        .dashedBoxes {
+            display: block;
+            position: initial;
+            .dashedBox {
+                display: inline-block;
+                width: 50%;
+                margin: auto;
+                &:nth-child(1)::before, 
+                &:nth-child(2)::before, 
+                &:nth-child(3)::before, 
+                &:nth-child(4)::before,
+                &:nth-child(4)::after {
+                    display: none;
+                }
+            }
+        }
+        .heartHolder {
+            .dashedHeart {
+                margin: 20px auto;
+                &::before {
+                    display: none;
+                }
+            }
+            .videoHolder {
+                margin: 20px auto;
+                &::before {
+                    top: -4px;
+                }
+                &::after {
+                    bottom: -14px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .section1 {
+        padding: 2rem;
+        .dashedBoxes {
+            .dashedBox { 
+                width: 100%;
+            }
+        }
+        .heartHolder {
+            .videoHolder {
+                video {
+                    width: 300px;
+                }
+                &::before,
+                &::after {
+                    max-width: 200px;
+                    width: 100%;
+                }
+                &::after {
+                    left: 60px;
+                }
+                &::before {
+                    top: 20px;
+                }
+            }
+        }
+    }
+}

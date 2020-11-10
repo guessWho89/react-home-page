@@ -1,0 +1,132 @@
+@import './App.scss';
+
+.section3 {
+    padding: 6rem 3rem;
+    position: relative;
+    h2 {
+        text-align: center;
+        color: $theme-color;
+        margin-bottom: 60px;
+    }
+    .itemCards {
+        height: 550px;
+        display: flex;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        position: relative;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .card {
+            margin: 20px;
+            min-width: 340px;
+            background: $gray-light;
+            border-radius: 20px;
+            overflow: hidden;
+            .imageHolder {
+                img {
+                    width: 100%;
+                    height: 150px;
+                }
+            }
+            .textHolder {
+                padding: 20px;
+                h3 {
+                    color: $theme-color;
+                    margin-bottom: 40px;
+                    font-size: 1.75rem;
+                }
+                p {
+                    font-size: 18px;
+                    color: $gray-text;
+                }
+                .name {
+                    color: $theme-color;
+                    font-weight: 500;
+                }
+            }
+            .banner {
+                padding: 10px;
+                background: $gray-dark;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                span {
+                    margin: 5px;
+                    font-size: 18px;
+                    color: $theme-color;
+                }
+                img {
+                    width: 25px;
+                    margin: 5px;
+                }
+            }
+        }
+    }
+    .controls {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 40%;
+        .left,
+        .right {
+            background: $gray-light;
+            box-shadow: 0 0 10px $gray-dark;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.3s;
+            opacity: 0.7;
+            &:hover {
+                box-shadow: 0 0 30px $gray-dark;
+                opacity: 1;
+            }
+        }
+        .left { 
+            margin-left: 20px;
+        }
+        .right {
+            margin-left: calc(100% - 160px);
+            margin-right: auto;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .section3 {
+        padding: 4rem 0 2rem;
+        .itemCards {
+            h2 {
+                margin-bottom: 30px;
+            }
+            .card {
+                min-width: 310px;
+                height: 500px;
+                .textHolder {
+                    h3 {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+        .controls {
+            .left, 
+            .right {
+                width: 50px;
+                height: 50px;
+            }
+            .left {
+                margin-left: 10px;
+            } 
+            .right {
+                margin-left: calc(100% - 120px);
+            }
+        }
+    }
+}

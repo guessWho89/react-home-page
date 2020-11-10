@@ -1,0 +1,217 @@
+@import './App.scss';
+
+header {
+    padding: 20px;
+    background: $theme-color;
+    position: relative;
+    .wrap {
+        display: flex;
+        flex-direction: column;
+    }
+    .logoImg {
+        width: 240px;
+        height: 70px;
+        background-image: url('../images/logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    .topBar {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .menu {
+        margin: auto;
+        display: flex;
+    }
+    .menuOption {
+        color: $light-text;
+        padding: 10px 0px;
+        margin: 20px;
+        font-size: 26px;
+        transition: 0.3s;
+        &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            transition: width .3s;
+            margin-top: 10px;
+        }
+        &:hover::after {
+            width: 100%;
+        }
+    }
+    .linkToMessages,
+    .linkToNotifications {
+        padding: 20px 10px;
+        position: relative;
+    }    
+    .linkToNotifications:after {
+        content: attr(data-notification-count);
+        width: 20px;
+        height: 20px;
+        background: $contrast-color;
+        border-radius: 50%;
+        color: $light-text;
+        line-height: 1;
+        position: absolute;
+        text-align: center;
+        font-weight: bold;
+        right: 0px;
+        top: -5px;
+    }
+    .userInfo {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .avatar img {
+        width: 50px;
+        margin: 10px;
+    }
+    .userOptions {
+        color: $light-text;
+        border: none;
+        background: transparent;
+        font-size: 22px;
+        outline: none;
+        border: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+        padding-right: 30px;
+        z-index: 2;
+    }
+    .filters {
+        margin: 20px auto;
+        display: inline-flex;
+        background: $gray-light;
+        border-radius: 25px;
+        overflow: hidden;
+        select {
+            border: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-indent: 1px;
+            text-overflow: '';
+            padding: 25px;
+            font-size: 20px;
+            background: transparent;
+            width: 300px;
+            &:nth-child(2) {
+                border-left: 1px solid $gray;
+                border-right: 1px solid $gray;
+            }
+        }
+    }
+    .searchBtn {
+        border: none;
+        background: $contrast-color;
+        border-radius: 25px;
+        padding: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            opacity: 0.8;
+        }
+        .searchIcon {
+            color: #fff;
+            font-size: 3rem;
+        }
+    }
+    .searchInput {
+        display: none;
+        border: none;
+        font-size: 22px;
+        background: transparent;
+        padding: 15px;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+        padding: 0;
+        &::after {
+            display: none;
+        }
+        .wrap {
+            flex-direction: row;
+            background: #fff;
+        }
+        .menu,
+        .infoBox,
+        .userInfo,
+        .filters select {
+            display: none;
+        }
+        .logoImg {
+            width: 200px;
+            height: 60px;
+            margin-left: 20px;
+            background-image: url('../images/logo-dark.png');
+        }
+        .filters {
+            border-radius: 15px;
+            margin-left: auto;
+            margin-right: 40px;
+        }
+        .searchInput {
+            display: block;
+            font-size: 18px;
+        }
+        .searchBtn {
+            padding: 10px 15px;
+            border-radius: 15px;
+            .searchIcon {
+                width: 2.5rem;
+            }
+        }
+        .topBar {
+            padding: 20px;
+            background: $light-text;
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    header {
+        .topBar {
+            padding: 10px;
+        }
+        .logoImg {
+            width: 140px;
+            height: 40px;
+            margin: auto;
+        }
+        .filters {
+            margin-right: 10px;
+        }
+        .searchBtn {
+            padding: 5px 10px;
+            font-size: 16px;
+        }
+        .searchInput {
+            padding: 5px 10px;
+            font-size: 16px;
+            max-width: 150px;
+            width: 100%;
+            .searchIcon {
+                width: 2.2rem;
+            }
+        }
+        .iconHolder {
+            padding: 15px;
+            border-radius: 15px;
+            img {
+                width: 50px;
+                height: 50px;
+                padding: 0;
+            }
+        }
+    }
+}

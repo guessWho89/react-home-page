@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/AppSection3.css';
+import '../css/AppSection3.scss';
 import ItemCard from './ItemCard';
 import ArrowBackIosRoundedIcon from '@material-ui/icons/ArrowBackIosRounded';
 import ArrowForwardIosRoundedIcon from '@material-ui/icons/ArrowForwardIosRounded';

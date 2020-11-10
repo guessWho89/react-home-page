@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './css/App.css';
+import './css/App.scss';
 import AppHeader from './components/AppHeader';
 import Home from './pages/Home.js';
 import SearchItems from './pages/SearchItems.js';
@@ -10,11 +10,7 @@ import Help from './pages/Help.js';
 import AppFooter from './components/AppFooter';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default function App() {
   useEffect(() => {

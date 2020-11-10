@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/AppSection4.css';
+import '../css/AppSection4.scss';
 import greenCircle from '../images/green-circles.png';
 import { Button }  from '@material-ui/core';
 

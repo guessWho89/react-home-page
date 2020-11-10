@@ -1,0 +1,86 @@
+@import './App.scss';
+
+.section2 {
+    background: $theme-color;
+    padding: 6rem 3rem;
+    .wrap {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .imgHolder {
+            margin: auto 2rem;
+            .illustration2 {
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+        .textHolder {
+            max-width: 500px;
+            width: 100%;
+            padding: 10px;
+            margin: auto 2rem;
+            h2 {
+                color: $gray-light;
+            }
+            p {
+                font-size: 18px;
+                color: $gray;
+            }
+            .btnsHolder {
+                display: flex;
+                .signUp,
+                .signIn {
+                    color: $gray-light;
+                    padding: 10px 40px;
+                    font-size: 20px;
+                    border-radius: 15px;
+                    text-transform: capitalize;
+                    margin: 20px 5px;
+                    transition: 0.3s;
+                }
+                .signUp {
+                    background: $contrast-color;
+                    &:hover {
+                        background: $contrast-color;
+                        filter: brightness(0.9);
+                    }
+                }
+                .signIn {
+                    border: 1px solid $gray-light;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .section2 {
+        padding: 4rem 2rem;
+        .wrap {
+            flex-direction: column-reverse;
+            .imgHolder,
+            .textHolder {
+                margin: 1rem auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .section2 {
+        .wrap {
+            .textHolder {
+                .btnsHolder {
+                    .signUp,
+                    .signIn {
+                        padding-left: 28px;
+                        padding-right: 28px;
+                    }
+                }
+            }
+        }
+    }
+}

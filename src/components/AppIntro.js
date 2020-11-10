@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/AppIntro.css';
+import '../css/AppIntro.scss';
 import IntroBox from './IntroBox';
 import illustration1 from '../images/illustration1.png';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/AppHeader.css';
+import '../css/AppHeader.scss';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';

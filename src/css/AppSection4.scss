@@ -1,0 +1,92 @@
+@import './App.scss';
+
+.section4 {
+    padding: 3rem 0 6rem;
+    .grayBox {
+        margin-left: auto;
+        margin-right: 0;
+        margin-bottom: 60px;
+        background: $gray;
+        width: 80%;
+        padding: 80px 16%;
+        position: relative;
+        .btn {
+            border-radius: 20px;
+            padding: 20px 40px;
+            background: $contrast-color;
+            text-transform: initial;
+            font-size: 20px;
+            z-index: 2;
+            color: $gray-lighter;
+            transition: 0.3s;
+            &:hover {
+                background: $contrast-color;
+                filter: brightness(0.9);
+            }
+        }
+        h2 {
+            color: $theme-color;
+            margin-bottom: 2rem;
+            line-height: 3.5rem;
+        }
+        p {
+            font-size: 20px;
+            color: $gray-text;
+            line-height: 2rem;
+        }
+        .greenCircle {
+            max-width: 300px;
+            width: 100%;
+            display: block;
+            position: absolute;
+            left: -120px;
+            bottom: -100px;
+            z-index: 1;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .section4 {
+        .grayBox {
+            width: 100%;
+            .greenCircle {
+                left: initial;
+                right: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .section4 {
+        .grayBox {
+            padding: 4rem 2rem;
+            h2 {
+                line-height: 1.5;
+            }
+            .greenCircle {
+                width: 170px;
+                height: 170px;
+                bottom: -110px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .section4 {
+        padding: 2rem 0 2rem;
+        .grayBox { 
+            .btn {
+                padding-left: 28px;
+                padding-right: 28px;
+                z-index: 2;
+            }
+            .greenCircle {
+                bottom: -45px;
+                z-index: 1;
+            }
+        }
+    }
+}

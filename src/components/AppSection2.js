@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/AppSection2.css';
+import '../css/AppSection2.scss';
 import illustration2 from '../images/illustration2.png';
 import { Button }  from '@material-ui/core';
 

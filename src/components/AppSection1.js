@@ -1,7 +1,8 @@
 import React from 'react';
-import '../css/AppSection1.css';
+import '../css/AppSection1.scss';
 import DashedBoxes from './DashedBoxes';
 import dashedHeart from '../images/dashed-heart.png';
+import demoVideo from '../images/demo.mp4';
 
 export default function AppSection1() {
     return (
@@ -13,7 +14,8 @@ export default function AppSection1() {
             <DashedBoxes />
             <div className="heartHolder" data-aos="fade-left">
                 <div className="videoHolder">
-                    <iframe src="https://www.youtube.com/embed/RXKg1JyzfMY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="demo"></iframe>
+                    {/* <iframe src="https://www.youtube.com/embed/RXKg1JyzfMY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="demo"></iframe> */}
+                    <video src={demoVideo} controls></video>
                 </div>
                 <div className="dashedHeart">
                     <img src={dashedHeart} alt=""/>

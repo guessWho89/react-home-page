@@ -1,4 +1,4 @@
-import '../css/AppFooter.css';
+import '../css/AppFooter.scss';
 import logoAllDark from '../images/logo-all-dark.png';
 import fbIcon from '../images/fb-icon.png';
 import igIcon from '../images/ig-icon.png';
